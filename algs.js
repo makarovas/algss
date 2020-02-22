@@ -26,3 +26,7 @@ function selectionSort(list) {
 }
 
 console.log(selectionSort(items))
+
+
+
+// O(n x n ) || O(n  ^ 2)
