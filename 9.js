@@ -1,9 +1,9 @@
 const findLongestStr = (str) => {
   let longestStr = 0;
   str
+    .replace(/[^a-zA-Z]+/g, " ")
     .split(" ")
-    .replace(/[^a-zA-Z]+/g, "")
-    .forEach((element) => {
+    .map((element) => {
       if (longestStr < element.length) {
         longestStr = element.length;
         console.log(longestStr);
