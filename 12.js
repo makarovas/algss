@@ -5,7 +5,7 @@ console.log(reverseString("abbbacccdd 123"));
 const hardCoreReverse = (str) => {
   let result = [];
 
-  for (let i = str.length; i >= 0; i--) {
+  for (let i = str.length - 1; i >= 0; i--) {
     result.push(str[i]);
   }
   result = result.join("");
