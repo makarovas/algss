@@ -12,4 +12,4 @@ const findLongestStr = (str) => {
   return longestStr;
 };
 
-findLongestStr("kljslaqwwqsda skjf wqeqw eadasd 1432");
+findLongestStr("kljslaqwwqsda2ыфвф asdasdsadwqeqewwq skjf wqeqw eadasd 1432");
