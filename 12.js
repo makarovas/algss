@@ -8,6 +8,8 @@ const hardCoreReverse = (str) => {
   for (let i = str.length; i >= 0; i--) {
     result.push(str[i]);
   }
+  result = result.join("");
+
   console.log(result);
   return result;
 };
