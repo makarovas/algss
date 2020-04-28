@@ -28,3 +28,11 @@ const res = (arr) => {
 };
 
 console.log(res(["2312kljl3kj21", 23, 3232, 324]));
+
+const filterArray = (arr) => {
+  let result = [];
+  result = arr.filter((x) => typeof x === "number");
+  return result;
+};
+
+console.log(filterArray(["2312kljl3kj21", 432, 4, 32]));
