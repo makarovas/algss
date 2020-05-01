@@ -12,19 +12,16 @@ const items = [
   [32, 32, 4, , 5, 5],
 ];
 
-function findSmallest(arr) {
-  let smallest = 100000;
-
+const array = [1, 2, 3, 4, 5];
+function findBiggest(arr) {
+  let biggest = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (smallest < arr[i]) {
-      smallest = arr[i];
-      if (Array.isArray(arr[i])) {
-        findSmallest(arr[i]);
-      }
+    if (biggest < arr[i]) {
+      biggest = arr[i];
     }
   }
-  console.log(smallest);
-  return smallest;
+  console.log(biggest);
+  return biggest;
 }
 
-findSmallest(items);
+findBiggest(array);
