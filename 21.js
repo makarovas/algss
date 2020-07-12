@@ -18,8 +18,8 @@ function search(list, item) {
   while (low <= high) {
     counter++;
     console.log(counter);
-    let mid = Math.floor((low + high) / 2);
-    let guess = list[mid];
+    const mid = Math.floor((low + high) / 2);
+    const guess = list[mid];
     if (guess === item) return true;
     if (guess > item) high = mid - 1;
     else low = mid + 1;
@@ -32,3 +32,4 @@ function search(list, item) {
 console.log(search(items, 12));
 
 // o(n)
+// o(log n)
