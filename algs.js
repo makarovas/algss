@@ -14,7 +14,7 @@ function findLargestValue(list) {
 }
 
 function selectionSort(list) {
-  let newList = [];
+  const newList = [];
   let lrgItem;
   while (list.length) {
     lrgItem = findLargestValue(list);

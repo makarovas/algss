@@ -1,6 +1,6 @@
-const rops = { value: 1500, weight: 1 };
-const food = { value: 2000, weight: 3 };
-const tent = { value: 3000, weight: 4 };
+const rops = {value: 1500, weight: 1};
+const food = {value: 2000, weight: 3};
+const tent = {value: 3000, weight: 4};
 
 const constraint = [1, 2, 3, 4];
 // const constraint = 4;
@@ -8,7 +8,7 @@ const constraint = [1, 2, 3, 4];
 const items = [rops, tent, food];
 
 function createGrid() {
-  let newGrid = [];
+  const newGrid = [];
   for (let row = 0; row < items.length; row++) {
     newGrid[row] = [];
     for (let col = 0; col < constraint.length; col++) {
@@ -19,14 +19,14 @@ function createGrid() {
 }
 
 function fillInGrid(grid) {
-  for (let row in items) {
-    for (let col in constraint) {
-      let { value, weight } = items[row];
+  for (const row in items) {
+    for (const col in constraint) {
+      const {value, weight} = items[row];
       if (grid[row - 1] === undefined) {
         grid[row][col] = value;
         continue;
       }
-      let prevRowSameCol = grid[row - 1][col];
+      const prevRowSameCol = grid[row - 1][col];
       if (weight > constraint[col]) {
         grid[row][col] = prevRowSameCol;
         continue;
@@ -38,11 +38,11 @@ function fillInGrid(grid) {
         grid[row][col] = prevRowSameCol > value ? prevRowSameCol : value;
         continue;
       }
-      let diff = constraint[col - 1] - weight;
+      const diff = constraint[col - 1] - weight;
       grid[row][col] =
-        prevRowSameCol > value + grid[row - 1][diff]
-          ? prevRowSameCol
-          : value + grid[row - 1][diff];
+        prevRowSameCol > value + grid[row - 1][diff] ?
+          prevRowSameCol :
+          value + grid[row - 1][diff];
     }
   }
   return grid;
