@@ -34,5 +34,14 @@ function validAnagramm(first, second) {
   for (let i=0; i<first.length; i++ ) {
     const letter = first[i];
       lookup[letter] ? lookup[letter] +=1 : lookup[letter] = 1;
+      if (!lookup[letter]) {
+        return false;
+      } else {
+        lookup[letter] -= 1;
+      }
   }
+  return true;
 }
+
+
+console.log(validAnagramm('aasd', 'asad'));
