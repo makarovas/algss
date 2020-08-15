@@ -14,4 +14,4 @@ function sumZero(arr) {
   }
 }
 
-console.log(sumZero([2, 231, 4, 32, 4, 325, 25]));
+console.log(sumZero([-30, -3, 3, 30]));

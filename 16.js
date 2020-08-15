@@ -1,6 +1,6 @@
 function sum(arr) {
   let total = 0;
-  for (let i of arr) {
+  for (const i of arr) {
     total += i;
   }
   return total;

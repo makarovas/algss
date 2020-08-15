@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 const items = [0, 12, 3, 123, 1223, 4];
 
 function findLargestValue(list) {

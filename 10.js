@@ -1,6 +1,6 @@
 const arrayFilterWithoutStrings = (array) => {
-  let resultStr = [];
-  let resultNum = [];
+  const resultStr = [];
+  const resultNum = [];
 
   for (let i = 0; i < array.length; i++) {
     if (!isNaN(array[i])) {
@@ -10,16 +10,16 @@ const arrayFilterWithoutStrings = (array) => {
     }
   }
   console.log(resultStr, resultNum);
-  return { resultStr, resultNum };
+  return {resultStr, resultNum};
 };
 
-arrayFilterWithoutStrings(["sdklj2131", "dsfskldj", 23, 2342]);
+arrayFilterWithoutStrings(['sdklj2131', 'dsfskldj', 23, 2342]);
 
 const res = (arr) => {
-  let filteredArray = [];
+  const filteredArray = [];
   for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
-    if (typeof arr[i] === "number") {
+    if (typeof arr[i] === 'number') {
       filteredArray.push(arr[i]);
     }
   }
@@ -27,12 +27,12 @@ const res = (arr) => {
   return filteredArray;
 };
 
-console.log(res(["2312kljl3kj21", 23, 3232, 324]));
+console.log(res(['2312kljl3kj21', 23, 3232, 324]));
 
 const filterArray = (arr) => {
   let result = [];
-
-  return (result = arr.filter((x) => typeof x === "number"));
+  result = arr.filter((x) => typeof x === 'number');
+  return result;
 };
 
-console.log(filterArray(["2312kljl3kj21", 432, 4, 32]));
+console.log(filterArray(['2312kljl3kj21', 432, 4, 32]));
